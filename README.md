@@ -4,34 +4,34 @@ This repository contains the code used to generate the analyses reported in the 
 
 ## Repository Structure
 
-###Core
+### Core
 
-\- scripts/train_models.py — trains Word2Vec models across bins
+\- Model training: `scripts/train_models.py`
 
-###Analysis
+### Analysis
 
-\- scripts/analysis/frequency_trends.py — raw, normalized, and relative frequency trends
+\- Frequency trends: `scripts/analysis/frequency_trends.py`
 
-\- scripts/analysis/normalized_frequency.py — visualization of normalized frequencies
+\- Normalized frequencies: `scripts/analysis/normalized_frequency.py`
 
-\- scripts/analysis/pairwise_comparisons.py — alignment-based semantic drift analysis
+\- Semantic drift: `scripts/analysis/pairwise_comparisons.py`
 
-\- scripts/analysis/heatmap.py — correlation heatmap of similarity trends
+\- Correlation heatmap of similarity trends: `scripts/analysis/heatmap.py`
 
-\- scripts/analysis/agency_axis.py — agency–passivity axis analysis
+\- Axis analysis: `scripts/analysis/agency_axis.py`
 
-###Robustness
+### Robustness
 
-\-scripts/robustness/bootstrap_analysis.py — bootstrapping for pairwise drift
+\- Bootstrapping: `scripts/robustness/bootstrap_analysis.py`
 
-\-scripts/robustness/control_analysis.py — cosine similarity analysis on matched control terms
+\- Cosine similarity analysis on matched control terms: `scripts/robustness/control_analysis.py`
 
-#Preprocessing&Helpers
-\-scripts/preprocessing/helper_extract_pdf_to_text.py — PDF text extraction
+# Preprocessing&Helpers
+\- PDF to text : `scripts/preprocessing/helper_extract_pdf_to_text.py`
 
-\-scripts/preprocessing/clean_and_lemmatize.txt — tokenization and lemmatization
+\- tokenization and lemmatization: `scripts/preprocessing/clean_and_lemmatize.txt`
 
-\-scripts/robustness/helper_control_term_selector.py — frequency-matched control term selection
+\- Frequency-matched control term selection: `scripts/robustness/helper_control_term_selector.py`
 
 \- Semantic Axis: `scripts/vector_arithmetic_agency_axis.py`
 
