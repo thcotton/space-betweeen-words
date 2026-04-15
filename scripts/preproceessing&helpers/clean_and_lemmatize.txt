@@ -1,0 +1,49 @@
+"""
+Cleanup
+"""
+import pandas as pd
+import re
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+
+# NLTK data files
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+nltk.download('stopwords')
+
+# Load dataset
+DATA_DIR = "data/"
+
+lemmatizer = WordNetLemmatizer()
+
+def clean(text):
+    # Remove non-alphanumeric characters and extra spaces
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+    text = re.sub(r'\s+', ' ', text)  # Remove multiple spaces
+    text = text.lower()  # Convert text to lowercase
+    return text
+
+# Tokenize and lemmatize
+def preprocess_text(text):
+    text = clean(text)
+    tokens = word_tokenize(text)
+    # Lemmatization: Use WordNetLemmatizer to get the base form of the word
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens if token.isalpha()]
+    return lemmatized_tokens
+
+def remove_short_words(tokens):
+    # Remove words with length <= 2
+    return [word for word in tokens if len(word) > 2]
+
+# Apply preprocessing to cleaned text column
+data['ProcessedText'] = data['FullText_Cleaned'].apply(preprocess_text)
+
+# Apply the short word removal
+data['ProcessedText'] = data['ProcessedText'].apply(remove_short_words)
+
+# Convert text into a list
+sentences = data['ProcessedText'].tolist()
+
+# Save
+data.to_csvdata.to_csv("outputs/cleaned.csv", index=False)

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or reproduce the analyses, please cite the associated paper and this repository."
+
+title: "The Space Between Words: Code and Analyses"
+authors:
+  - family-names: Cotton
+    given-names: Tori Helen
+    orcid: https://orcid.org/0009-0008-4701-6081
+
+version: 1.0.0
+date-released: 2026-01-20
+
+repository-code: "https://github.com/thcotton/The-Space-Between-Words-GitHub-Repo"
+
+keywords:
+  - philosophy of science
+  - feminist philosophy of biology
+  - computational linguistics
+  - word embeddings
+  - feminist philosophy of science
+  - philosophy of language
+  - metaphor analysis
+  - semantic change
+  - word2vec
