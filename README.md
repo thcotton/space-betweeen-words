@@ -35,6 +35,25 @@ This repository contains the code used to generate the analyses reported in the 
 
 \- Semantic Axis: `scripts/vector_arithmetic_agency_axis.py`
 
+## Data Availability
+
+This repository includes a metadata file (`data/corpus_metadata.csv`) listing all documents in the corpus, including title, authors, publication year, journal, and DOI where available. Due to copyright restrictions, full-text articles are not distributed. Researchers with appropriate institutional access can retrieve the original articles using this metadata and reproduce the corpus using the preprocessing scripts provided.
+
+The repository includes all code and derived data necessary to reproduce the analyses reported in the paper.
+
+## Environment
+
+To recreate the environment used for this project:
+
+### Option 1: Conda (recommended)
+
+```bash
+conda env create -f environment.yml
+conda activate gamete-analysis
+
+### Option 2: Pip
+pip install -r requirements.txt
+
 ## Notes
 This repository represents the research workflow used to generate the reported results. It is not intended as a polished software package. Regardless, this should get someone where they need to produce the analyses described in the paper, should they want to. Please note that for anonymity reasons, the file paths in the scripts have been replaced with generic placeholders (e.g., data/ and outputs/). Users should update these paths to match their local setup and provide the necessary input data.
 
@@ -51,4 +70,4 @@ workers: half CPU cores # parallel worker threads (minimum 1)
 epochs: 15              # training iterations
 sg: 1                   # skip-gram architecture
 
-# The-Space-Between-Words-GitHub-Repo
+# Space-Between-Words

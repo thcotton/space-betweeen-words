@@ -1,0 +1,17 @@
+name: gamete-analysis
+
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - gensim
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - nltk
+  - spacy
+  - pip
+  - pip:
+      - pdfplumber
+      - pymupdf
+      - pytesseract

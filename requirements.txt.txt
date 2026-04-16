@@ -1,0 +1,11 @@
+pandas
+numpy
+gensim
+matplotlib
+seaborn
+scikit-learn
+nltk
+spacy
+pdfplumber
+pymupdf
+pytesseract
