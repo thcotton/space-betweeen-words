@@ -1,6 +1,6 @@
 \# The Space Between Words – Code Repository
 
-This repository contains the code used to generate the analyses reported in the paper.**
+This repository contains the code used to generate the analyses reported in the paper.
 
 ## Repository Structure
 
@@ -26,10 +26,10 @@ This repository contains the code used to generate the analyses reported in the 
 
 \- Cosine similarity analysis on matched control terms: `scripts/robustness/control_analysis.py`
 
-# Preprocessing&Helpers
+# Preprocessing & Helpers
 \- PDF to text : `scripts/preprocessing/helper_extract_pdf_to_text.py`
 
-\- tokenization and lemmatization: `scripts/preprocessing/clean_and_lemmatize.txt`
+\- tokenization and lemmatization: `scripts/preprocessing/clean_and_lemmatize.py`
 
 \- Frequency-matched control term selection: `scripts/robustness/helper_control_term_selector.py`
 
@@ -50,9 +50,12 @@ To recreate the environment used for this project:
 ```bash
 conda env create -f environment.yml
 conda activate gamete-analysis
+```
 
 ### Option 2: Pip
+```bash
 pip install -r requirements.txt
+```
 
 ## Notes
 This repository represents the research workflow used to generate the reported results. It is not intended as a polished software package. Regardless, this should get someone where they need to produce the analyses described in the paper, should they want to. Please note that for anonymity reasons, the file paths in the scripts have been replaced with generic placeholders (e.g., data/ and outputs/). Users should update these paths to match their local setup and provide the necessary input data.
@@ -69,5 +72,4 @@ min_count: 2            # minimum frequency for inclusion
 workers: half CPU cores # parallel worker threads (minimum 1)
 epochs: 15              # training iterations
 sg: 1                   # skip-gram architecture
-
-# Space-Between-Words
+```
