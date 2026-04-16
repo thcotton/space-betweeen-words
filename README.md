@@ -26,7 +26,7 @@ This repository contains the code used to generate the analyses reported in the 
 
 \- Cosine similarity analysis on matched control terms: `scripts/robustness/control_analysis.py`
 
-# Preprocessing & Helpers
+### Preprocessing & Helpers
 \- PDF to text : `scripts/preprocessing/helper_extract_pdf_to_text.py`
 
 \- tokenization and lemmatization: `scripts/preprocessing/clean_and_lemmatize.py`
