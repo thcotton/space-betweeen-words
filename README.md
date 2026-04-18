@@ -1,5 +1,3 @@
-\# The Space Between Words – Code Repository
-
 This repository contains the code used to generate the analyses reported in the paper.
 
 ## Repository Structure
